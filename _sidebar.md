@@ -40,5 +40,10 @@
 
 ---
 
+- **Security**
+- [AWS Alarms](security/aws_alarms.md)
+
+---
+
 - **Decisions (ADRs)**
 - [ADR Template](decisions/adr-template.md)

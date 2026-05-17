@@ -1,0 +1,3 @@
+- [Ditteau Data Drive](https://drive.google.com/drive/folders/1WpvGWVMiiqoHQig0Xv9evkS52DU2GZDE)
+- [Ditteau Archive Drive](https://drive.google.com/drive/folders/1pvI0LuN_qGThg956syiPa5qmw_bOWnYw)
+- [Serensoft Shared Drive](https://drive.google.com/drive/folders/0ALFNv1jT9hANUk9PVA)

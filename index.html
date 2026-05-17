@@ -22,6 +22,7 @@
       name: 'Serensoft Wiki',
       repo: 'https://github.com/ditteau/serensoft-wiki',
       loadSidebar: true,
+      loadNavbar: true,
       subMaxLevel: 3,          // auto-expand h1/h2/h3 in sidebar
       auto2top: true,
       search: {
@@ -50,5 +51,12 @@
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-yaml.min.js"></script>
+
+function(hook) {
+  hook.doneEach(function() {
+    document.querySelectorAll('.app-nav a[href^="https://drive.google.com"]')
+      .forEach(a => a.setAttribute('target', '_blank'));
+  });
+}
 </body>
 </html>
