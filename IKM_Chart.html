@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Serensoft information domains — reference</title>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    background: #F1EFE8;
+    color: #2C2C2A;
+    margin: 0;
+    padding: 40px 24px;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; }
+  h1 { font-size: 22px; font-weight: 500; margin: 0 0 8px; }
+  .sub { color: #5F5E5A; font-size: 14px; margin: 0 0 32px; }
+  section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 15px;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-bottom: 14px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 14px;
+  }
+  .card {
+    background: #ffffff;
+    border: 0.5px solid #D3D1C7;
+    border-radius: 12px;
+    padding: 16px 18px;
+  }
+  .card h3 { font-size: 15px; font-weight: 500; margin: 0 0 6px; }
+  .card p { font-size: 13px; line-height: 1.5; color: #5F5E5A; margin: 0 0 10px; }
+  .owner {
+    font-size: 12px;
+    font-weight: 500;
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 6px;
+  }
+  .client .section-title, .client .owner { background: #EEEDFE; color: #3C3489; }
+  .bridge .section-title, .bridge .owner { background: #FAECE7; color: #712B13; }
+  .internal .section-title, .internal .owner { background: #E6F1FB; color: #0C447C; }
+  .operational .section-title, .operational .owner { background: #F1EFE8; color: #444441; }
+  .subgroup {
+    margin-top: 16px;
+    padding: 16px;
+    border: 0.5px dashed #B4B2A9;
+    border-radius: 12px;
+    background: #FAFAF8;
+  }
+  .subgroup-title { font-size: 13px; font-weight: 500; color: #5F5E5A; margin: 0 0 10px; }
+  .subgroup .card { padding: 12px 14px; }
+  .subgroup .card h3 { font-size: 14px; }
+  .flag { border-color: #EF9F27; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Serensoft information domains — reference</h1>
+  <p class="sub">Descriptions and owners for all nine domains, with authority noted for the five cross-cutting subdomains.</p>
+
+  <section class="client">
+    <div class="section-title">Client-facing domains</div>
+    <div class="grid">
+      <div class="card">
+        <h3>Client engagement</h3>
+        <p>Deliverables, runbooks, and reports produced for specific clients (Ditteau today).</p>
+        <span class="owner">Delivery lead (per engagement)</span>
+      </div>
+      <div class="card">
+        <h3>Video content</h3>
+        <p>Client-facing video assets; may split into client and internal subdomains as the team grows.</p>
+        <span class="owner">Owner: TBD</span>
+      </div>
+      <div class="card">
+        <h3>Sales & CRM</h3>
+        <p>Pipeline, client history, and proposals (Insightly today).</p>
+        <span class="owner">Leadership</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="bridge">
+    <div class="section-title">Bridge domain</div>
+    <div class="grid">
+      <div class="card flag">
+        <h3>Practice development</h3>
+        <p>Templates, working docs, and experimental artifacts across engagements, not yet client-specific. Scales badly if left ungoverned.</p>
+        <span class="owner">Not yet assigned — KKM leading candidate</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="internal">
+    <div class="section-title">Internal domains</div>
+    <div class="grid">
+      <div class="card">
+        <h3>Product knowledge</h3>
+        <p>Specs, decisions, known issues, and roadmaps per product line.</p>
+        <span class="owner">WDT (DA), LVP (DD)</span>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top: 14px;">
+      <h3>Cross-cutting technical knowledge</h3>
+      <p>Architecture, governance, security, and UI patterns shared across products.</p>
+      <span class="owner">WDT (authority); LVP co-authors infrastructure</span>
+
+      <div class="subgroup">
+        <p class="subgroup-title">Five subdomains — same level, authority shown (not owner)</p>
+        <div class="grid">
+          <div class="card">
+            <h3>Data architecture</h3>
+            <p>Structural and schema design shared across products.</p>
+            <span class="owner">Authority: WDT</span>
+          </div>
+          <div class="card">
+            <h3>Data governance (internal)</h3>
+            <p>Internal governance rules — already run through the full five-question framework as the reference case.</p>
+            <span class="owner">Authority: WDT</span>
+          </div>
+          <div class="card">
+            <h3>Security</h3>
+            <p>Security patterns shared across products.</p>
+            <span class="owner">Authority: WDT</span>
+          </div>
+          <div class="card flag">
+            <h3>Infrastructure (Snowflake/AWS)</h3>
+            <p>Snowflake and AWS configuration and access decisions — the flagged highest-risk gap.</p>
+            <span class="owner">Authority: WDT + LVP</span>
+          </div>
+          <div class="card">
+            <h3>User interface</h3>
+            <p>UI patterns shared across products.</p>
+            <span class="owner">Authority: WDT</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="operational">
+    <div class="section-title">Operational domains</div>
+    <div class="grid">
+      <div class="card">
+        <h3>Operational knowledge</h3>
+        <p>Internal processes, templates, and onboarding materials not tied to a client or product.</p>
+        <span class="owner">Operations</span>
+      </div>
+      <div class="card">
+        <h3>Project & task tracking</h3>
+        <p>Who's doing what, by when (Asana today).</p>
+        <span class="owner">Project leads</span>
+      </div>
+      <div class="card">
+        <h3>Financial & time tracking</h3>
+        <p>Billing, time tracking, and invoicing (Harvest today).</p>
+        <span class="owner">Finance / leadership</span>
+      </div>
+      <div class="card">
+        <h3>People & HR (new)</h3>
+        <p>Employment contracts, HR policies, and compliance records — exists as its own domain specifically because of SOC 2.</p>
+        <span class="owner">Leadership</span>
+      </div>
+    </div>
+  </section>
+</div>
+</body>
+</html>
